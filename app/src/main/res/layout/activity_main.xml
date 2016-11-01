@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mange.mortgageapp.Main">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/Investment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/secondPage">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row00">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Address:"
+                                android:id="@+id/addressTextView"
+                                android:layout_column="0"
+                                android:padding="6dp"
+                                android:textSize="20dp" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/address"
+                                android:layout_column="1"
+                                android:layout_span="3" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row01">
+
+                            <TextView
+                                android:text="Price:"
+                                android:id="@+id/priceTextView"
+                                android:layout_column="0"
+                                android:textSize="20dp"
+                                android:padding="6dp" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/price"
+                                android:layout_column="1"
+                                android:layout_span="3" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rowAdd">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Square Foot:"
+                                android:id="@+id/sqrInput"
+                                android:layout_column="0" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/sqrUserInput"
+                                android:layout_column="0"
+                                android:layout_span="3" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row02">
+
+                            <TextView
+                                android:text="Price Per Sqr Foot:"
+                                android:id="@+id/sqr"
+                                android:layout_column="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sqrTextView"
+                                android:layout_column="1"
+                                android:paddingLeft="10dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row03">
+
+                            <TextView
+                                android:text="Agent Fee:"
+                                android:id="@+id/feeTextView"
+                                android:layout_column="0" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row04">
+
+                            <TextView
+                                android:text="Repairs:"
+                                android:id="@+id/rapairsTextView"
+                                android:layout_column="0" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"
+                                android:id="@+id/repairs"
+                                android:layout_column="1"
+                                android:layout_span="3" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Net:"
+                                android:id="@+id/netTextView"
+                                android:layout_column="0"
+                                android:padding="6dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Closing Cost:"
+                                android:id="@+id/closingTextView"
+                                android:layout_column="0"
+                                android:padding="6dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Holding Cost:"
+                                android:id="@+id/holdingTextView"
+                                android:layout_column="0"
+                                android:padding="6dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Profit"
+                                android:id="@+id/profitTextView"
+                                android:layout_column="0"
+                                android:padding="6dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Offer:"
+                                android:id="@+id/offerTextView"
+                                android:layout_column="0"
+                                android:padding="6dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Email:"
+                                android:id="@+id/emailTextView"
+                                android:layout_column="0"
+                                android:padding="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_span="0" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"
+                                android:id="@+id/Email"
+                                android:layout_column="1"
+                                android:layout_span="1" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:id="@+id/button2"
+                                android:layout_column="2" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Home"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/firstPage"
+                        android:stretchColumns="1,2,3"
+                        android:layout_weight="0"
+                        android:baselineAligned="false">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row0">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Mortgage Amount:"
+                                android:id="@+id/cost"
+                                android:textSize="20dp"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="8dp"
+                                android:layout_column="0"
+                                android:layout_span="0" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"
+                                android:id="@+id/monthlyMortgage"
+                                android:layout_column="1"
+                                android:layout_span="1"
+                                android:hint="0.00" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Interest Rate:"
+                                android:id="@+id/rates"
+                                android:layout_column="0"
+                                android:textSize="20dp"
+                                android:layout_span="1" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"
+                                android:id="@+id/userRate"
+                                android:layout_column="1"
+                                android:layout_span="1"
+                                android:hint="0.0" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row2">
+
+                            <SeekBar
+                                android:id="@+id/seekBar"
+                                android:layout_column="0"
+                                android:layout_gravity="center_vertical"
+                                android:indeterminate="false"
+                                android:max="2000"
+                                android:progress="500"
+                                android:layout_span="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="60dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row3">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Number of Payments:"
+                                android:id="@+id/numPay"
+                                android:layout_column="0"
+                                android:textSize="20dp" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/numMonths"
+                                android:layout_column="1"
+                                android:hint="Number of Months" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row4">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calculate"
+                                android:id="@+id/but"
+                                android:layout_column="0"
+                                android:layout_span="2"
+                                android:gravity="center"
+                                android:paddingRight="55dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/row5">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"
+                                android:id="@+id/monthlyPayment"
+                                android:layout_column="0"
+                                android:hint="Your Monthly Payments!"
+                                android:layout_span="3"
+                                android:gravity="center" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
